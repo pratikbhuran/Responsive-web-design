@@ -12,20 +12,20 @@ body {
   font-family: 'Poppins';
 }
 
-span {
-  color: var(--primary-color);
-}
-
 .navbar {
   background: white;
   padding: 1em;
 }
 
-.logo {
+.navbar .logo {
   text-decoration: none;
   font-weight: bolder;
   font-size: 2em;
   color: black;
+}
+
+.navbar span {
+  color: var(--primary-color);
 }
 
 nav {
@@ -184,7 +184,7 @@ textarea {
   cursor: pointer;
 }
 
-nav.mobile-menu {
+nav.menu-btn {
   display: block;
 }
 
@@ -264,13 +264,14 @@ nav li a:hover {
     padding-left: 1em;
     padding-right: 1em;
   }
-  .navbar nav ul.primary-nav, .navbar nav .secondary-nav {
+  .navbar nav ul.primary-nav {
     margin: 0;
   }
-  .navbar nav input {
-    border: 3px solid gray;
-    top: -.2em;
-    border-radius: 5em;
+  .navbar nav ul.secondary-nav {
+    display: none;
+  }
+  .navbar nav ul.secondary-nav input {
+    display: none;
   }
   .navbar nav li.current a {
     font-weight: bold;
